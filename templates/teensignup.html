@@ -1,0 +1,99 @@
+
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign up with teenQuiz</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/teensignup.css">
+</head>
+
+<body class="light">
+	
+	<nav>
+		<div>
+			<h3>Menu</h3>
+		</div>
+		<ul class="navlinks">
+			<li><a href={{ url_for('index') }}>Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a id="mode" href="#">Dark</a></li>
+		</ul>
+
+		<div class="burger">
+			<div class="bars"></div>
+			<div class="bars"></div>
+			<div class="bars"></div>
+		</div>
+	</nav>
+
+	<div class="header">
+		<h1>teen<span id="heading" class="greenText">Quiz</span></h1>
+		<p>Enjoy the unlimited fun!</p>
+	</div>
+
+	<div class="main">
+		<p>welcome to <span class="blueText">teen</span><span class="greenText">Quiz</span>...<br>...tell a friend, join us and enjoy the fun!</p>
+
+		<p>"<strong>Answer it! Pass it! Level up!</strong> and finally <strong>Ask it while you control it!</strong>"</p>
+
+		<div class="form">
+			<p><strong>Sign up</strong> with <span class="blueText">teen</span><span class="greenText">Quiz</span><br> get your free account and be ready to enjoy the fun!</p>
+			{% for messages in get_flashed_messages() %}
+			<p style="color: red"> <strong>Error:</strong> {{ error }}</p>
+			{% endfor %}
+			<form action="/teensignup" method="POST">
+				
+				<label for="firstName"> First Name
+					<br>
+					<input name="firstName" id="firstName" class="input" type="text" required placeholder="first name">
+				</label>
+				<br>
+				<label for="Other name">Other name <br>
+					<input id="OtherName" class="input" type="text" name="OtherName" required placeholder="Other name">
+				</label>
+				<br>
+				<label for="email">Email (optinal) <br>
+					<input id="email" class="input" type="email" name="Email" placeholder="email">
+				</label>
+				<br>
+				<label for="phone"> Phone number <br>
+					<input id="number" class="input" type="text" name="number" required placeholder="Phone number">
+				</label>
+				<br>
+				<label for="gender">Gender <br>
+					<input type="text" name="gender" placeholder="gender" required>
+				</label>
+				<br>
+				<label for="password">Password <br>
+					<input id="password" class="input" type="password" name="password" required placeholder="password">
+				</label>
+				<br>
+				<label for="password">Comfirm Password<br>	
+					<input id="password2" class="input" type="password" name="password2" required placeholder="comfirm password">
+				</label>
+				<br>
+
+				<p>By clicking the <strong>Sign up button</strong>...You declare that you agree to our <span class="links">terms of service</span> and our <span class="links">privacy and use policies</span>.</p>
+
+				<p>The new unlimited fun awaits</p>
+				Already have account? <a class="links" href={{ url_for('login') }}>Log in</a>
+				<br>
+				<input type="submit" value="Sign Up">
+				<br>
+
+			</form>
+		</div>
+		
+	</div>
+
+	<footer>
+				<img class="image" src="/static/images/primU.png" alt="primU Logo">
+				<p>@primU developers</p>
+	</footer>
+</body>
+
+<script type="text/javascript" src="/static/javascript/teensignup.js"></script>
+</html>

@@ -1,0 +1,268 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/css/home.css">
+	<title>teenQuiz</title>
+    </head>
+    
+    <body>
+        <header>
+   <!---********************Navigation Menu********************-->
+            <nav class="main-menu">
+                <div>
+                    <h3>Menu</h3>
+                </div>
+                <ul class="navlinks">
+                    <li><a href={{ url_for('index') }}>Home</a></li>
+                    <li><a href={{ url_for('About') }}>About</a></li>
+                    <li><a href={{ url_for('contact') }}>Contact</a></li>
+                    <li><a id="dark-button" href="#">Dark</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        
+        </header>
+    <!--***************************Heading***********************-->
+        <div class="head">
+            <h1>teen<span class="greenText">Quiz</span></h1>
+            <p>Enjoy the unlimited fun!</p>
+        </div>
+            <!--********User Dashboard***********-->
+            
+                <nav class="side-menu">
+                    <div>
+                        <h3>User Dashboard</h3>
+                    </div>
+                    <ul class="side-links">
+                        <li><a href={{ url_for('user_profile') }}><img class="icons" src="/static/images/profileIcon.png" alt="">Log out</a></li>
+                        <li><a href={{ url_for('Progress') }}><img class="icons" src="/static/images/progressIcon.png" alt=""> Progress</a></li>
+                        <li><a href={{ url_for('New') }}><img class="icons" src="/static/images/newIcon.png" alt=""> New</a></li>
+                        <li><a href={{ url_for('Trending') }}><img class="icons" src="/static/images/trending.jpeg" alt=""> Trending</a></li>
+                        <li><a href={{ url_for('Share') }}><img class="icons" src="/static/images/shareIcon.png" alt=""> Share</a></li>
+                    </ul>
+                    <div class="show-board">
+                        <img class="form-image" src="/static/images/dashboard.png" alt="">
+                    </div>
+                </nav>
+            
+            <main id="main">
+            <!---************Main content***************************-->
+            <!--Sample quiz-->
+            <div class="container">
+                {% for messages in get_flashed_messages() %}
+                <p style="color: blue"> <strong>Contacts:</strong> {{details}} </p>
+                <p style="color: blue"> <strong>Email:</strong> {{mail}} </p>
+                {% endfor %}
+                <p><cite>"play to the master level and change the game!"</cite></p>
+                <br>
+                <h3>Logical format</h3>
+                <em>(how you should answer or challenge)</em>
+                <p>
+                    <ol>
+                        <p><strong>Sample Questions</strong></p>
+                        <li>1). What is harder to catch no matter how faster you run?</li>
+                        <li>2). What breathes fire and spits water?</li>
+                        <li>3). What makes you young?</li>
+
+                        <p><strong>Sample Answers</strong></p>
+                        <li>1). Breath</li>
+                        <li>2). A boiling pan</li>
+                        <li>3). Letters ng</li>
+                    </ol>
+                    <cite><strong>NB: Questions MUST start with What!! <br> Answers should not be sentences!!</strong></cite>
+            </div>
+<!--************************Default Quizzz*************************-->
+            <div class="top">
+            <h3>Get started with <span class="blueText">teen</span><span class="greenText">Quiz</span></h3>
+            </div>
+
+            <div class="container">
+                <h3>Fresher Level <img class="form-image" src="/static/images/showForm.png"></h3>
+                <form id="fresher">
+
+                    <ol id="freshContainer">
+                    <label for="question"><li>1). What makes you young?</li>
+                        <input name="feshAns1" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>2). What is between you?</li>
+                        <input name="feshAns2" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>3). What appears twice in a week but only once in a year?</li>
+                        <input name="feshAns3" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>4). What tastes better than it smells?</li>
+                        <input name="feshAns4" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>5). What wets as it dries?</li>
+                        <input name="feshAns5" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>6). What is the end of everything?</li>
+                        <input name="feshAns6" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>7). What is found in the middle of a house?</li>
+                        <input name="feshAns7" id="fesher-answers" class="answers" type="text" placeholder="Your answer">
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>8). What has a head and a tail but with no body?</li>
+                        <input name="feshAns8" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>9). What has words but never speaks?</li>
+                        <input name="feshAns9" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    
+                    <br>
+
+                    <label for="question"><li>10). What goes up but never comes down?</li>
+                        <input name="feshAns10" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
+                    </label>
+                    </ol>
+                    <input class="submit-btn" type="submit" value="Submit Answers">
+                </form>
+            </div>
+<!--Intermediate level-->
+            <div class="container">
+                <h3>Intermediate Level <img class="form-image" src="/static/images/showForm.png"></h3>
+
+                <form id="intermediate">
+                    <ol id="intContainer">
+
+                        <label for="questions"><li>1). What building has the most stories?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>2). What has cities with no houses, forests with no trees and water with no fish?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>3). What is the kind of a band that doesn't play music?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>4). What tire doesn't move when a car turns right?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>5). What has a bottom at the top?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>6). What runs around but never moves?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>7). What goes through cities and fields but never moves?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>8). What can't talk but reply when spoken too?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>9). What has branches but has no leaves, fruits nor the trunk?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="questions"><li>10). Whats harder to catch nomatter how faster you run?</li>
+                            <input id="intermediate-answers" type="text" placeholder="Your answer" required>
+                        </label>
+
+                    </ol>
+                    <input class="submit-btn" type="submit" value="Submit answers">
+                </form>
+            </div>
+
+<!--Master Level-->
+            
+            <div class="container">
+                <h3>Master Level <img class="form-image" src="/static/images/showForm.png"></h3>
+
+                <form id="master">
+                    <ol id="masContainer">
+                        <label for="quuestions"><li>1). What has to be broken before you can use it?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>2). What is tall when young but short when old?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>3). What is full of holes but still holds water?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>4). What is always infront of you but can't be seen?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>5). What is so fragile that saying its name breaks it?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>6). What can fill a room but takes up no space?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>7). What goes forward as its left behind?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>8). What makes today come before yesterday?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>9). What stalks the countryside with ears that can't hear?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+                        <label for="quuestions"><li>10). What can travel around the world without leaving its corner?</li>
+                            <input id="master-answers" type="text" placeholder="Your answer" required>
+                        </label>
+
+                    </ol>
+                    <input class="submit-btn" type="submit" value="Submit answers">
+                </form>
+            </div>
+
+<!--Maters set questions-->
+            <div class="container">
+                <h3>Challenge<img class="form-image" src="/static/images/showForm.png" alt=""></button></h3>
+
+                <form id="challenge">
+
+                    <label for="ask">Quizz <br>
+                        <input  id="quiz" type="text" placeholder="Ask question ie. What ...?">
+                    </label>
+                    <br>
+                    <label for="level">Level <br>
+                        <input id="level" type="text" placeholder="Specify level eg. Fresher">
+                    </label>
+                    <br>
+                    <label for="answer">Answer <br>
+                        <input id="ans" type="text" placeholder="Give the Answer eg. A phone">
+                    </label>
+                    <br>
+                    <input class="submit-btn" type="submit" value="Set Challenge">
+                </form>
+            </div>
+
+        </main>
+
+        <footer>
+            <img class="image" src="/static/images/primU.png" alt="primU Logo">
+            <p>@primU developers</p>
+        </footer>
+    </body> 
+    <script src="/static/javascript/home.js"></script>
+</html>

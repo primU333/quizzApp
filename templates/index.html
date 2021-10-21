@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+	<title>teenQuiz-Online challenge</title>
+</head>
+
+<body>
+	<nav>
+		<div>
+			<h3>Menu</h3>
+		</div>
+		<ul class="navlinks">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a id="dark-button" href="#">Dark</a></li>
+		</ul>
+		<div class="burger">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+	</nav>
+
+	<div class="header">
+		<h1>teen<span class="green">Quiz</span></h1>
+		<p>Enjoy the unlimited fun!</p>
+	</div>
+
+	<div class="container">
+		<h3>What is <span class="blueText">teen</span><span class="greenText">Quiz</span>?</h3>
+		<p><span class="blueText">teen</span><span class="greenText">Quiz</span> is a three level brain challenge i.e: <em class="levels">fresher, intermediate</em> and <em class="levels">master</em>...<br>...read the question, answer it, get promoted to the next level and finally rule the challenge...<br>...You determine who wins which level.</p>
+		<ul class="Keys">
+			<h5 class="sub-heading">Keys</h5>	
+			<li>Masters set the challenges.</li>
+			<li>Challenges consist of a pair of 5 questions.</li>
+			<li>Complexity is based on the level of the challenge.</li>
+		</ul>
+		<img class="site-images" src="/static/images/grup discussion.jpg" alt="image">
+	</div>
+
+	<div class="container">
+		<h3>How to play <span class="blueText">teen</span><span class="greenText">Quiz</span>??</h3>
+		<p>in <span class="blueText">teen</span><span class="greenText">Quiz</span>, you sign up then log in...<br>...boom! You have joined the challenge!<br>Play and win the <em class="levels">fresher class</em> then go for the intermediate class...<br>In <em class="levels">intermediate class</em>, you participate in a more complex challenge  compared to the <em class="levels">fresher class</em>, play win and go to the <em class="levels">master class</em>!<br>...In the <em class="levels">master class</em>, you will not be challenged..You will challenge! ...set challenges and rule the game!!!</p>
+	</div>
+
+	<div class="container">
+		<h3>Why <span class="blueText">teen</span><span class="greenText">Quiz</span>?</h3>
+		<p><span class="blueText">teen</span><span class="greenText">Quiz</span> is basically developed to improve teenage logic through the participation in the unguessable challenges!<br> "prove your logic, and let others disprove it logically in <span class="blueText">teen</span><span class="greenText">Quiz</span>!</p>
+		<p><span class="blueText">teen</span><span class="greenText">Quiz</span> does not need any installation. participate freely online<br>
+		works on any device as long as you are connected</p>
+		<img class="site-images" src="/static/images/mobile devices.jpg" alt="image">
+	</div>
+<!--Unfinished element,  content missing 1!!!-->
+	<div class="container">
+		<h3>What <span class="blueText">teen</span><span class="greenText">Quiz</span> developers say</h3>
+		<p><cite>"we bring the world closer to you<br> Anything you want, anything you wish<br>Ask us, we will not let you down."</cite></p>
+		<img class="site-images" src="/static/images/disscuss.jpg" alt="image">
+	</div>
+	<div class="small-image" >
+		<img id="dev-icon" src="/static/images/blackAbout.png">
+	</div>
+	<div class="profile">
+		<h3>Developer</h3>
+		<img class="photo" src="/static//images/code333!.jpg" alt="primU developer image">
+		<div>
+			<p>Name: Jimson Aine (<em class="levels">code333!</em>)</p>
+			<p>Email: <a href="#" class="links">primu333@gmail.com</a><br>Country: Uganda</p>
+		</div>
+		<p class="sub-heading"><strong>Languages</strong>
+			<li>Python</li>
+			<li>Javascript</li>
+			<li>CSS</li>
+			<li>HTML</li>
+			<li>SQL</li>
+		</p>
+		<cite>"Everything is impossible but Anything is possible"</cite>
+	</div>
+	<div id="log-icon" class="small-image2">
+		<button type="submit"><strong>Log in</strong></button>
+	</div>
+	<div class="logIn">
+		<p>continue to <span class="blueText">teen</span><span class="greenText">Quiz</span>...<br>
+			already have account? <a class="links" href={{ url_for('login') }}>Log in</a> <br>
+			Don't have an account? <a class="links" href={{ url_for('signup') }}>Sign Up</a> now.
+		</p>
+		<cite>Hurry and enjoy, the unlimited fun awaits!</cite>
+
+
+<div class="title">
+ <h1>join<br/>teenQuiz<br>now!</h1>
+</div>
+
+
+	</div>
+
+	<footer>
+				<img class="image" src="/static/images/primU.png" alt="primU Logo">
+				<p>@primU developers</p>
+	</footer>
+
+	<script type="text/javascript" src="/static/javascript/script.js"></script>
+
+</body>
+</html>

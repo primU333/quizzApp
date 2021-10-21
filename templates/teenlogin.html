@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log in to teenQuiz</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/teenlogin.css">
+</head>
+
+
+<body class="light">
+	<!--navigation menu-->
+	<nav>
+		<div>
+			<h3>Menu</h3>
+		</div>
+		<ul class="navlinks">
+			<li><a href={{ url_for('index') }}>Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a id="change" href="#">Dark</a></li>
+		</ul>
+
+		<div class="burger">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+	</nav>
+
+	<div class="header">
+		<h1>teen<span class="green">Quiz</span></h1>
+		<p>Enjoy the unlimited fun!</p>
+	</div>
+<!-- welcoming intro-->
+	<div class="main">
+		<p>welcome to <span class="blueText">teen</span><span class="greenText">Quiz</span>...<br>...tell a friend, join us and enjoy the fun!</p>
+		<br>
+		<p>"<strong>Answer it! Pass it! Level up!</strong> and finally <strong>Ask it while you control it!</strong>"</p>
+
+		<div class="form">
+				{% for messages in get_flashed_messages() %}
+				<p style="color: red"><strong>Error:</strong> {{ error }}</p>
+				{% endfor %}
+			<p><strong>Log in</strong> with your <span class="blueText">teen</span><span class="greenText">Quiz</span> account and enjoy the fun.</p>
+<!--Log in and sign up-->
+			<form id="logInform" action="/teenlogin" method=POST>
+				
+				<label for="user name">User Phone Number
+					<br>
+					<input id="userID" class="input" type="text" name="userID" placeholder="User ID" required>
+				</label>
+				<br>
+				<label for="password">Password
+					<br> 
+					<input id="LoginPassword" class="input" type="password" name="LoginPassword" required="" placeholder="password">
+				</label>
+					<br>
+				<input id="btt" type="submit" value="Log in">
+			
+			</form>
+
+			<p>Dont have an account? <a class="links" href={{ url_for('signup') }}>Sign up</a> for a <span class="blueText">teen</span><span class="greenText">Quiz</span> account. <br> The new unlimited fun awaits </p>
+		</div>
+	</div>
+<!--developer info-->
+	<footer>
+				<img class="image" src="/static/images/primU.png" alt="primU Logo">
+				<p>@primU developers</p>
+	</footer>
+
+<script type="text/javascript" src="/static/javascript/teenlogin.js"></script>
+</body>
+</html>
