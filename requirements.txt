@@ -54,7 +54,6 @@ PySocks==1.6.8
 pytest==6.2.5
 python-debian==0.1.35
 python-pam==1.8.4
-python-xapp==1.8.1
 python-xlib==0.23
 pytz==2019.1
 pyxdg==0.25
