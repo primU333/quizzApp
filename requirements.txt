@@ -50,7 +50,6 @@ pyinotify==0.9.6
 PyJWT==1.7.1
 pyOpenSSL==19.0.0
 pyparsing==2.2.0
-pyparted==3.11.2
 PySocks==1.6.8
 pytest==6.2.5
 python-apt==1.8.4.1
