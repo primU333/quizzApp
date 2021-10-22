@@ -33,7 +33,6 @@ MarkupSafe==1.1.0
 matlab==0.1
 nltk==3.6.2
 numpy==1.21.2
-onboard==1.4.1
 packaging==19.0
 pexpect==4.6.0
 Pillow==5.4.1
