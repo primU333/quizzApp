@@ -85,9 +85,12 @@
 
             <div class="container">
                 <h3>Fresher Level <img class="form-image" src="/static/images/showForm.png"></h3>
-                <form id="fresher" action="/home"
+                <form id="fresher" action="/fresher">
 
                     <ol id="freshContainer">
+                            {% for messages in get_flashed_messages() %}
+                            <p> <strong>Success!!: </strong> {{ message }} </p>
+                            {% endfor%}
                     <label for="question"><li>1). What makes you young?</li>
                         <input name="feshAns1" id="fesher-answers" class="answers" type="text" placeholder="Your answer" required>
                     </label>
@@ -153,9 +156,11 @@
             <div class="container">
                 <h3>Intermediate Level <img class="form-image" src="/static/images/showForm.png"></h3>
 
-                <form id="intermediate" action="/home">
+                <form id="intermediate" action="/intermediate">
                     <ol id="intContainer">
-
+                        {% for messages in get_flashed_messages() %}
+                        <p> <strong>Success!!: </strong> {{ message }} </p>
+                        {% endfor%}
                         <label for="questions"><li>1). What building has the most stories?</li>
                             <input id="intermediate-answers" type="text" placeholder="Your answer" required>
                         </label>
@@ -197,8 +202,11 @@
             <div class="container">
                 <h3>Master Level <img class="form-image" src="/static/images/showForm.png"></h3>
 
-                <form id="master" action="/home">
+                <form id="master" action="/master">
                     <ol id="masContainer">
+                            {% for messages in get_flashed_messages() %}
+                            <p> <strong>Success!!: </strong> {{ message }} </p>
+                            {% endfor%}
                         <label for="quuestions"><li>1). What has to be broken before you can use it?</li>
                             <input id="master-answers" type="text" placeholder="Your answer" required>
                         </label>
@@ -239,7 +247,10 @@
             <div class="container">
                 <h3>Challenge<img class="form-image" src="/static/images/showForm.png" alt=""></button></h3>
 
-                <form id="challenge">
+                <form id="challenge" action="/challenge">
+                    {% for messages in get_flashed_messages() %}
+                    <p> <strong>Success!!: </strong> {{ message }} </p>
+                    {% endfor%}
 
                     <label for="ask">Quizz <br>
                         <input  id="quiz" type="text" placeholder="Ask question ie. What ...?">

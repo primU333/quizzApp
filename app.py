@@ -142,6 +142,35 @@ def Trending():
 def Progress():
     return 'Current User progress can not be shown! \n teenQuiz sends apologies'
 
+@app.route('/fresher')
+def submit_fresher():
+    fresher_message = 'You have submited your fresher answers, teenQuizz is checking answers.Meanwhile, answer next level'
+    flash(fresher_message)
+    return render_template('home.html', message = fresher_message)
+
+
+@app.route('/intermediate')
+def submit_intermediate():
+    intermediate_message = fresher_message = 'You have submited your intermediate answers, teenQuizz is checking answers.Meanwhile, answer next level'
+    flash(intermediate_meassage)
+    return render_template('home.html', message = intermediate_message)
+
+
+@app.route('/master')
+def submit_master():
+    master_message = fresher_message = 'You have submited your master answers, teenQuizz is checking answers.Meanwhile, answer next level'
+    flash(master_message)
+    return render_template('home.html', message = master_message)
+
+
+@app.route('/challenge')
+def submit_challenge():
+    challenge_message = fresher_message = ' quizz submited!, teenQuizz is checking your submission. We will post your quizz in a short time'
+    return render_template('home.html', message = challenge_message)
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
